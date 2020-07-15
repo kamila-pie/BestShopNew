@@ -1,0 +1,33 @@
+@import "fonts";
+@import "color";
+@import "mixins";
+
+$button-radius: 35px;
+
+
+.btn {
+  color: $color-white;
+  font-weight: bold;
+  display: inline-block;
+  padding: 16px 65px;
+  border-radius: $button-radius;
+  border: none;
+}
+
+.btn--primary {
+  background-color: $color-primary;
+  border-radius: $button-radius;
+  box-shadow: 5px 10px 14px $color-primary-btn-shadow;
+}
+
+.btn--redish {
+  background-color: $color-redish;
+}
+
+.btn--green {
+  background-color: $color-green;
+}
+
+.btn--large {
+  padding: 22px 155px;
+}
