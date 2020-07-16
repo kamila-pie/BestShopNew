@@ -1,0 +1,54 @@
+/*  Opening section with benner */
+.opening {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.opening__content {
+  margin-top: 130px;
+  text-align: center;
+}
+
+.opening__header {
+  font-family: $font-raleway;
+  font-size: 3.0625rem;
+}
+
+.opening__heading {
+  margin-top: 20px;
+  margin-bottom: 38px;
+}
+
+.opening__image {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 780px) {
+  .opening {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .opening__content {
+    margin-top: 130px;
+    text-align: center;
+  }
+
+  .opening__header {
+    font-family: $font-raleway;
+    font-size: 3.0625rem;
+  }
+
+  .opening__heading {
+    margin-top: 20px;
+    margin-bottom: 38px;
+  }
+
+  .opening__image {
+    width: 100%;
+    height: auto;
+  }
+}

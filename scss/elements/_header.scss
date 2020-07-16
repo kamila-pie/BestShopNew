@@ -1,0 +1,143 @@
+.header {
+  height: 70px;
+  box-shadow: 0 3px 6px #00000029;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.header__nav {
+  display: flex;
+}
+
+.nav__element {
+  padding: 0 26px;
+  font-family: $font-open-sans;
+  font-weight: 700;
+  font-size: 0.6875rem;
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.nav__link {
+  color: $color-grey;
+  font-family: $font-open-sans;
+  font-weight: 700;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  padding: 28px 18px 22px;
+  border-bottom: 4px solid transparent;
+  letter-spacing: 0.1875rem;
+
+  &:hover {
+    color: $color-black;
+    border-color: $color-primary;
+  }
+}
+
+.page-nav-toggle {
+  width: 30px;
+  height: 26px;
+  border: 0;
+  border-top: 4px solid $color-primary;
+  background: transparent;
+  position: relative;
+  &::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top: 4px solid $color-primary;
+    transform: translateY(6px);
+  }
+  &::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top: 4px solid $color-primary;
+    transform: translateY(16px);
+  }
+  &:focus{
+    transform: rotate(45deg) translateY(5px);
+    border: none;
+    &::after{
+      transform: rotate(-90deg) translateX(-6px);
+    }
+  }
+}
+
+
+@media (max-width: 780px) {
+  .header__nav {
+    display: none;
+    position: fixed; //przyklej do ekranu
+    top: 70px;
+    right: 0;
+    background: $color-white;
+    box-shadow: 0 3px 6px #00000029;
+    flex-direction: row;
+    width: 100%;
+    height: 70px;
+    justify-content: flex-start;
+    transition: 0.5s;
+  }
+  .header__nav.show {
+    left: 0;
+  }
+  .page-nav-toggle {
+    display: flex;
+  }
+  .header__container {
+    flex-direction: row;
+  }
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .nav__element {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .header__nav {
+    top: 70px;
+    right: 0;
+    flex-direction: column;
+    width: 100px;
+    height: 100%;
+    justify-content: flex-start;
+    transition: 0.5s;
+  }
+  .header__nav.show {
+    left: 0;
+
+  }
+  .page-nav-toggle {
+    display: flex;
+  }
+
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .nav__element {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+  }
+}

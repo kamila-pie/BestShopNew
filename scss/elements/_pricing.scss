@@ -1,0 +1,160 @@
+
+/* SECTION Pricing  */
+
+.pricing {
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pricing__boxes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.pricing__box {
+  width: 370px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //border: 1px solid $color-primary;
+}
+
+.pricing__details {
+  margin-top: 34px;
+  margin-bottom: 60px;
+  text-align: center;
+
+  .pricing__type {
+    font-size: 1.25rem;
+    font-family: $font-raleway;
+    font-weight: 700;
+  }
+
+  .pricing__price {
+    font-size: 2.875rem;
+    font-family: $font-open-sans;
+    font-weight: 300;
+    margin-top: 25px;
+    color: $color-primary;
+  }
+}
+
+.pricing__limited {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.75rem;
+  font-family: $font-raleway;
+  font-weight: 700;
+}
+
+.pricing__items {
+  text-align: center;
+}
+
+.pricing__item {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/*pseudoelements icons -yes for pricing items*/
+.pricing__item::before {
+  content: "";
+  width: 11px;
+  height: 11px;
+  display: inline-block;
+  margin-right: 10px;
+  background-image: url("../assets/Ckechmark-1.svg");
+}
+
+/*pseudoelements icons -not for pricing items*/
+.pricing__item--not::before {
+  background-image: url("../assets/Close.svg");
+}
+
+
+/*buttons for all boxprice options
+relative rozpycha wielkość div'a*/
+.pricing__box .btn {
+  position: relative;
+  bottom: -25px;
+  font-size: 0.8125rem;
+}
+
+/*** Basic Box ***/
+.pricing__box--basic {
+  border: 1px solid $color-redish;
+
+  .btn__basic {
+    background-color: $color-redish;
+  }
+}
+
+.pricing__box--basic .pricing__price {
+  margin-bottom: 30px;
+}
+
+
+/*** Professional Box **/
+.pricing__box--professional {
+  border: 1px solid $color-primary;
+  width: 400px;
+  margin: 0 40px;
+  box-shadow: 5px 1px 27px $color-primary-btn-shadow;
+}
+
+.pricing__box--professional .pricing__type {
+  font-size: 1.3125rem;
+}
+
+.pricing__box--professional .pricing__item {
+  margin-bottom: 25px;
+}
+
+///*** Premium Box ***/
+.pricing__box--premium {
+  border: 1px solid $color-green;
+
+  .btn__premium {
+    background-color: $color-green;
+  }
+}
+
+@media (max-width: 1040px) {
+  .pricing__boxes{
+    flex-direction: column;
+  }
+  .pricing__box--professional {
+    margin: 50px 40px;
+  }
+  .pricing__box--basic {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .pricing__items {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .pricing__box .btn {
+    bottom: -107px;
+    left: -84px;
+  }
+}
+//
+//@media (max-width: 780px) {
+//  .pricing__boxes{
+//    flex-direction: column;
+//  }
+//  .pricing__box--professional {
+//    margin: 50px 40px;
+//  }
+//}
+
+

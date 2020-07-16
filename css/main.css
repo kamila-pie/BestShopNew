@@ -409,6 +409,12 @@ h2 {
   max-width: 1352px;
   margin: 0 auto;
 }
+@media (max-width: 1352px) {
+  .container {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
 
 .logo {
   font-family: "Raleway", sans-serif;
@@ -417,7 +423,6 @@ h2 {
   color: #08A6E4;
 }
 
-/*SECTION HEADER & NAVIGATION*/
 .header {
   height: 70px;
   box-shadow: 0 3px 6px #00000029;
@@ -459,6 +464,110 @@ h2 {
   border-color: #08A6E4;
 }
 
+.page-nav-toggle {
+  width: 30px;
+  height: 26px;
+  border: 0;
+  border-top: 4px solid #08A6E4;
+  background: transparent;
+  position: relative;
+}
+.page-nav-toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-top: 4px solid #08A6E4;
+  transform: translateY(6px);
+}
+.page-nav-toggle::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-top: 4px solid #08A6E4;
+  transform: translateY(16px);
+}
+.page-nav-toggle:focus {
+  transform: rotate(45deg) translateY(5px);
+  border: none;
+}
+.page-nav-toggle:focus::after {
+  transform: rotate(-90deg) translateX(-6px);
+}
+
+@media (max-width: 780px) {
+  .header__nav {
+    display: none;
+    position: fixed;
+    top: 70px;
+    right: 0;
+    background: #ffffff;
+    box-shadow: 0 3px 6px #00000029;
+    flex-direction: row;
+    width: 100%;
+    height: 70px;
+    justify-content: flex-start;
+    transition: 0.5s;
+  }
+
+  .header__nav.show {
+    left: 0;
+  }
+
+  .page-nav-toggle {
+    display: flex;
+  }
+
+  .header__container {
+    flex-direction: row;
+  }
+
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .nav__element {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+  }
+}
+@media (max-width: 600px) {
+  .header__nav {
+    top: 70px;
+    right: 0;
+    flex-direction: column;
+    width: 100px;
+    height: 100%;
+    justify-content: flex-start;
+    transition: 0.5s;
+  }
+
+  .header__nav.show {
+    left: 0;
+  }
+
+  .page-nav-toggle {
+    display: flex;
+  }
+
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .nav__element {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+  }
+}
 /*  Opening section with benner */
 .opening {
   display: flex;
@@ -486,6 +595,33 @@ h2 {
   height: auto;
 }
 
+@media (max-width: 780px) {
+  .opening {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .opening__content {
+    margin-top: 130px;
+    text-align: center;
+  }
+
+  .opening__header {
+    font-family: "Raleway", sans-serif;
+    font-size: 3.0625rem;
+  }
+
+  .opening__heading {
+    margin-top: 20px;
+    margin-bottom: 38px;
+  }
+
+  .opening__image {
+    width: 100%;
+    height: auto;
+  }
+}
 .statistics {
   margin-top: 100px;
 }
@@ -561,7 +697,24 @@ h2 {
   margin-top: 19px;
 }
 
-/* SECTION BOXES - Benefits  */
+@media (max-width: 960px) {
+  .statistics__title {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 15px;
+  }
+
+  .statistics__container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .statistics__single {
+    margin: 10px 0;
+  }
+}
 .benefits {
   padding: 100px 0;
   width: 100%;
@@ -714,6 +867,28 @@ h2 {
   padding-right: 15px;
 }
 
+@media (max-width: 1040px) {
+  .benefits__double {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .benefits__single {
+    flex-direction: column-reverse;
+  }
+
+  .benefits__single--image {
+    margin: 0;
+  }
+
+  .benefits__single--notebook .benefits__image img {
+    padding-top: 70px;
+  }
+
+  .benefits__single--notebook .benefits__image::before {
+    top: 48px;
+  }
+}
 /* SECTION Pricing  */
 .pricing {
   margin: 100px auto;
@@ -832,6 +1007,30 @@ relative rozpycha wielkość div'a*/
   background-color: #55DFB4;
 }
 
+@media (max-width: 1040px) {
+  .pricing__boxes {
+    flex-direction: column;
+  }
+
+  .pricing__box--professional {
+    margin: 50px 40px;
+  }
+
+  .pricing__box--basic {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .pricing__box--basic .pricing__items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pricing__box .btn {
+    bottom: -107px;
+    left: -84px;
+  }
+}
 /* SECTION CONTACT */
 .contact {
   padding: 80px 100px 100px;
