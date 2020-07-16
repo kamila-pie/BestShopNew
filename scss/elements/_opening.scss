@@ -45,10 +45,26 @@
   .opening__heading {
     margin-top: 20px;
     margin-bottom: 38px;
+    margin-left: 30px;
+    margin-right: 30px;
+    line-height: 1.25rem;
   }
 
   .opening__image {
     width: 100%;
     height: auto;
+  }
+}
+
+//mobile 360x780
+@media (max-width: 360px){
+  .opening__heading{
+    padding: 0 30px;
+  }
+  .opening__image {
+    width: 210%;
+    position: relative;
+    bottom: -27px;
+    left: -200px;
   }
 }

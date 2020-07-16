@@ -33,3 +33,8 @@ h2 {
   color: $color-primary;
 }
 
+@media (max-width: 360px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+}
