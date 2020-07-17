@@ -42,3 +42,33 @@
 .details__item img {
   margin-right: 10px;
 }
+
+@media (max-width: 360px) {
+  .contact {
+    padding: 10px 28px 30px;
+    flex-direction: column;
+  }
+  .contact__column {
+    width: 100%;
+  }
+
+  .contact__instruction {
+    width: 100%;
+  }
+  .contact__details {
+    flex-direction: column;
+
+  }
+  .content__text {
+    width: 277px;
+  }
+
+  .details__item {
+    width: 100%;
+    margin: 10px 0 53px 0;
+    &:first-of-type {
+      margin: 10px 0;
+    }
+  }
+
+}

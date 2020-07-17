@@ -389,7 +389,7 @@ textarea {
 }
 
 @media (max-width: 360px) {
-  .opening__content .btn--large {
+  .btn.btn--primary.btn--large {
     padding: 16px 78px;
     margin: 0 20px;
   }
@@ -928,6 +928,10 @@ h2 {
     padding: 0 30px;
   }
 
+  .benefits__single .benefits__text {
+    margin: 20px 36px 50px 36px;
+  }
+
   .benefits__single--notebook .benefits__image {
     margin-right: 0;
   }
@@ -942,8 +946,33 @@ h2 {
     padding-right: 28px;
   }
 
-  .benefits__single .benefits__text {
-    width: 100%;
+  .benefits__single--notebook .benefits__text::after {
+    width: 240px;
+  }
+
+  .benefits__single--phone {
+    padding: 0 0 0 11px;
+  }
+
+  .benefits__single--phone .benefits__image::before {
+    width: 170px;
+    height: 165px;
+    left: 47px;
+    top: 21px;
+  }
+
+  .benefits__single--phone .benefits__image img {
+    width: 270px;
+    padding-top: 28px;
+    padding-left: 48px;
+  }
+
+  .benefits__single--phone .benefits__text::after {
+    width: 240px;
+  }
+
+  .benefits__single--solo .benefits__text::after {
+    width: 240px;
   }
 }
 /* SECTION Pricing  */
@@ -1039,6 +1068,7 @@ relative rozpycha wielkość div'a*/
 
 .pricing__box--basic .pricing__price {
   margin-bottom: 30px;
+  color: #FB3B64;
 }
 
 /*** Professional Box **/
@@ -1063,29 +1093,97 @@ relative rozpycha wielkość div'a*/
 .pricing__box--premium .btn__premium {
   background-color: #55DFB4;
 }
+.pricing__box--premium .pricing__details .pricing__price {
+  color: #55DFB4;
+}
 
-@media (max-width: 1040px) {
-  .pricing__boxes {
-    flex-direction: column;
+@media (max-width: 360px) {
+  .pricing {
+    margin: 53px auto;
   }
 
-  .pricing__box--professional {
-    margin: 50px 40px;
+  .pricing__boxes {
+    flex-direction: column;
   }
 
   .pricing__box--basic {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    width: 90%;
+    position: relative;
+    margin-bottom: 50px;
+  }
+  .pricing__box--basic .btn__basic {
+    bottom: -20px;
+    left: 64px;
+    position: absolute;
+  }
+  .pricing__box--basic .pricing__details {
+    width: 50%;
+  }
+  .pricing__box--basic .pricing__details .pricing__type {
+    padding-left: 0;
   }
   .pricing__box--basic .pricing__items {
     display: flex;
     flex-direction: column;
+    align-items: self-start;
   }
 
-  .pricing__box .btn {
-    bottom: -107px;
-    left: -84px;
+  .div.pricing__box:nth-child(2) {
+    position: absolute;
+    bottom: -140px;
+    font-size: 0.8125rem;
+    left: -117px;
+  }
+
+  .pricing__box--professional {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+    margin-bottom: 50px;
+  }
+  .pricing__box--professional .pricing__box .btn {
+    position: absolute;
+    bottom: -140px;
+    font-size: 0.8125rem;
+    left: -117px;
+  }
+  .pricing__box--professional .pricing__details {
+    width: 50%;
+  }
+  .pricing__box--professional .pricing__details .pricing__type {
+    padding-left: 0;
+  }
+  .pricing__box--professional .pricing__items {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+  }
+
+  .pricing__box--premium {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    position: relative;
+    margin-bottom: 50px;
+  }
+  .pricing__box--premium .btn__premium {
+    bottom: -20px;
+    left: 64px;
+    position: absolute;
+  }
+  .pricing__box--premium .pricing__details {
+    width: 50%;
+  }
+  .pricing__box--premium .pricing__details .pricing__type {
+    padding-left: 0;
+  }
+  .pricing__box--premium .pricing__items {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
   }
 }
 /* SECTION CONTACT */
@@ -1131,6 +1229,36 @@ relative rozpycha wielkość div'a*/
   margin-right: 10px;
 }
 
+@media (max-width: 360px) {
+  .contact {
+    padding: 10px 28px 30px;
+    flex-direction: column;
+  }
+
+  .contact__column {
+    width: 100%;
+  }
+
+  .contact__instruction {
+    width: 100%;
+  }
+
+  .contact__details {
+    flex-direction: column;
+  }
+
+  .content__text {
+    width: 277px;
+  }
+
+  .details__item {
+    width: 100%;
+    margin: 10px 0 53px 0;
+  }
+  .details__item:first-of-type {
+    margin: 10px 0;
+  }
+}
 /* FORM SECTION */
 .form {
   display: flex;

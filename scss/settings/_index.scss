@@ -35,7 +35,7 @@ $button-radius: 35px;
 //mobile 360 x 780
 
 @media (max-width: 360px) {
-  .opening__content .btn--large {
+  .btn.btn--primary.btn--large {
     padding: 16px 78px;
     margin: 0 20px;
   }

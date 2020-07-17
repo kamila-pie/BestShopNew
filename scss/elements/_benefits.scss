@@ -189,6 +189,9 @@
   .benefits .benefits__container {
     padding: 0 30px;
   }
+  .benefits__single .benefits__text {
+    margin: 20px 36px 50px 36px;
+  }
   .benefits__single--notebook .benefits__image {
     margin-right: 0;
     &::before {
@@ -201,9 +204,31 @@
     width: 270px;
     padding-right: 28px;
   }
-  .benefits__single .benefits__text {
-    width: 100%;
-  //.benefits__description {
-  //  margin: 30px 62px 30px 0px;
+  .benefits__single--notebook .benefits__text::after {
+    width: 240px;
+  }
+
+  .benefits__single--phone {
+    padding: 0 0 0 11px;
+  }
+  .benefits__single--phone .benefits__image::before {
+    width: 170px;
+    height: 165px;
+    left: 47px;
+    top: 21px;
+  }
+
+  .benefits__single--phone .benefits__image img {
+    width: 270px;
+    padding-top: 28px;
+    padding-left: 48px;
+  }
+
+  .benefits__single--phone .benefits__text::after {
+    width: 240px;
+  }
+
+  .benefits__single--solo .benefits__text::after {
+    width: 240px;
   }
 }
